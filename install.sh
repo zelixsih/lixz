@@ -21,7 +21,7 @@ display_welcome() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${WHITE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${WHITE}[+]                  © RevanBotz                    [+]${NC}"
+  echo -e "${WHITE}[+]                  © ZelixBotz                    [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e ""
@@ -29,9 +29,9 @@ display_welcome() {
   echo -e "dilarang keras untuk dikasih gratis."
   echo -e ""
   echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
-  echo -e "@revanbotz"
+  echo -e "@lixzsukatobrut"
   echo -e "ＣＲＥＤＩＴＳ :"
-  echo -e "@revanbotz"
+  echo -e "@lixzsukatobrut"
   sleep 4
   clear
 }
@@ -71,14 +71,14 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "revan" ]; then
+  if [ "$USER_TOKEN" = "zelixx" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}"
   else
-    echo -e "${RED}Buy dulu Gih Ke ZeroDev${NC}"
-    echo -e "${YELLOW}TELEGRAM : @ext4you${NC}"
+    echo -e "${RED}Buy dulu Gih Ke Zelix${NC}"
+    echo -e "${YELLOW}TELEGRAM : @lixzsukatobrut${NC}"
     echo -e "${YELLOW}WHATSAPP : 6287767050506${NC}"
-    echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
-    echo -e "${YELLOW}©zerodeveloper${NC}"
+    echo -e "${YELLOW}HARGA TOKEN : 5K${NC}"
+    echo -e "${YELLOW}©zelix${NC}"
     exit 1
   fi
   clear
@@ -433,20 +433,19 @@ auto_install_panel_complete() {
   echo -e "                                                       "
 
   # Minta input sesuai request
-  echo -e "${YELLOW}MASUKIN DOMAIN PANEL (contoh: panel.xyz.com):${NC}"
+  echo -e "${YELLOW}MASUKIN DOMAIN PANEL:${NC}"
   read -r domainPanel
-  echo -e "${YELLOW}MASUKIN NODE DOMAIN (contoh: node.xyz.com):${NC}"
+  echo -e "${YELLOW}MASUKIN NODE DOMAIN:${NC}"
   read -r domainNode
-  echo -e "${YELLOW}MASUKIN RAM (dalam MB, contoh: 4096):${NC}"
+  echo -e "${YELLOW}MASUKIN RAM:${NC}"
   read -r memory
-  echo -e "${YELLOW}MASUKIN DISK SPACE (dalam MB, contoh: 10240):${NC}"
+  echo -e "${YELLOW}MASUKIN DISK SPACE:${NC}"
   read -r disk_space
 
-  # Generate credentials acak persis logika js: "jhon" + random string
   local rand4=$(generate_random_string 4)
   local rand6=$(generate_random_string 6)
-  local user="jhon${rand4}"
-  local pass="jhon${rand6}"
+  local user="zelix${rand4}"
+  local pass="zelix${rand6}"
 
   echo -e "\n${BLUE}[*] Memulai Instalasi Panel Pterodactyl... (Tunggu ~5 Menit)${NC}"
 
@@ -457,11 +456,11 @@ $user
 $user
 $pass
 Asia/Jakarta
-jhon@gmail.com
-jhon@gmail.com
+zelix@gmail.com
+zelix@gmail.com
 $user
-jhon
-jhon
+zelix
+zelix
 $domainPanel
 y
 y
@@ -484,7 +483,7 @@ y
 $user
 $pass
 $domainNode
-jhon@gmail.com
+zelix@gmail.com
 y
 y
 y
@@ -500,10 +499,9 @@ EOF
 
   # STEP 3: Create Node menggunakan script Github Bangsano
   bash <(curl -s https://raw.githubusercontent.com/Bangsano/Autoinstaller-Theme-Pterodactyl/main/createnode.sh) <<EOF
-SGP
-Jhonaley Tech
+IND🇮🇩
 $domainNode
-NODE BY JHON
+NODE BY ZELIX
 $memory
 $disk_space
 1
@@ -532,8 +530,8 @@ EOF
         "update_url": null
     },
     "exported_at": "2026-04-15T23:44:52+07:00",
-    "name": "Jhonaley\ud83d\ude80",
-    "author": "jhonaley-official@gmail.com",
+    "name": "zelix\ud83d\ude80",
+    "author": "zelix-official@gmail.com",
     "description": null,
     "features": null,
     "docker_images": {
@@ -775,7 +773,7 @@ EOF
   clear
   echo -e "                                                       "
   echo -e "${GREEN}[+] =================================================== [+]${NC}"
-  echo -e "${GREEN}[+]               INSTALASI ALL-IN-ONE BERHASIL!        [+]${NC}"
+  echo -e "${GREEN}[+]               INSTALASI BERHASIL!        [+]${NC}"
   echo -e "${GREEN}[+] =================================================== [+]${NC}"
   echo -e ""
   echo -e "📍 ${YELLOW}Domain Panel :${NC} https://${domainPanel}"
@@ -808,11 +806,11 @@ while true; do
   echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
   echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
   echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer ZeroDeveloper Private   ${NC}"
+  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer Zelix Private   ${NC}"
   echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
-  echo -e "${WHITE}ggg:     gg.     -   ,ggg       • WhatsApp : 6285854642521    ${NC}"
-  echo -e "${WHITE} ggg:     ggg._    _,ggg        • Credit  : RevanBotz ${NC}"
-  echo -e "${WHITE} ggg.    '.'''ggggggp           • Support by Revan Botz  ${NC}"
+  echo -e "${WHITE}ggg:     gg.     -   ,ggg       • Telegram : @lixzsukatobrut    ${NC}"
+  echo -e "${WHITE} ggg:     ggg._    _,ggg        • Credit  : zelix ${NC}"
+  echo -e "${WHITE} ggg.    '.'''ggggggp           • Support by Zelix Botz  ${NC}"
   echo -e "${WHITE}  'ggg    '-.__                                           ${NC}"
   echo -e "${WHITE}    ggg                                                   ${NC}"
   echo -e "${WHITE}      ggg                                                 ${NC}"
@@ -829,7 +827,7 @@ while true; do
   echo "6. Stellar Theme"
   echo "7. Hack Back Panel"
   echo "8. Ubah Pw Vps"
-  echo "9. Auto Install Panel (All-in-One)"
+  echo "9. Auto Install Panel"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/9/x:"
   read -r MENU_CHOICE
