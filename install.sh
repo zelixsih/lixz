@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Color
-BLUE='\033[0;34m'       
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[0;33m'
-WHITE='\033[0;37m'
+BLUE='\033;0;34m'       
+RED='\033;0;31m'
+GREEN='\033;0;32m'
+YELLOW='\033;0;33m'
+WHITE='\033;0;37m'
 NC='\033[0m'
 
 # Helper function untuk generate string acak (pengganti generateReadableString di Node.js)
@@ -142,7 +142,7 @@ install_theme() {
     php artisan migrate
     yarn build:production
     php artisan view:clear
-    sudo rm /root/C2.zip
+    sudo rm -f /root/C2.zip
     sudo rm -rf /root/pterodactyl
 
     echo -e "                                                       "
@@ -169,7 +169,7 @@ install_theme() {
     php artisan migrate
     yarn build:production
     php artisan view:clear
-    sudo rm /root/C1.zip
+    sudo rm -f /root/C1.zip
     sudo rm -rf /root/pterodactyl
 
     echo -e "                                                       "
@@ -207,7 +207,7 @@ install_theme() {
     php artisan migrate
     yarn build:production
     php artisan view:clear
-    sudo rm /root/C3.zip
+    sudo rm -f /root/C3.zip
     sudo rm -rf /root/pterodactyl
 
     echo -e "                                                       "
@@ -245,7 +245,8 @@ configure_wings() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
 
-  read -p "Masukkan token Configure menjalankan wings: " wings
+  echo -e "${YELLOW}Masukkan token Configure menjalankan wings: ${NC}"
+  read -r wings
   eval "$wings"
   sudo systemctl restart wings
 
@@ -355,7 +356,7 @@ install_themeSteeler() {
   yarn build:production
   php artisan view:clear
 
-  sudo rm /root/C2.zip
+  sudo rm -f /root/C2.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
@@ -422,9 +423,7 @@ EOF
   clear
 }
 
-# =========================================================
 # 9. MENU BARU: AUTO INSTALL PANEL ALL-IN-ONE + AUTO UPLOAD EGGS
-# =========================================================
 auto_install_panel_complete() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
@@ -513,9 +512,7 @@ EOF
   cd /var/www/pterodactyl && php artisan p:node:configuration 1 > /etc/pterodactyl/config.yml && chmod 600 /etc/pterodactyl/config.yml
   sudo systemctl restart wings
 
-    # =========================================================
   # STEP 5: PROSES AUTO UPLOAD/IMPORT EGGS (NODEJS & PYTHON)
-  # =========================================================
   echo -e "\n${BLUE}[*] Membuat dan Mengimport Eggs Otomatis...${NC}"
   
   # Membuat folder sementara untuk menampung file egg json
@@ -768,7 +765,6 @@ EOF
 
   # Hapus folder sementara agar VPS tetap bersih
   rm -rf /root/ptero_eggs
-  # =========================================================
 
   clear
   echo -e "                                                       "
@@ -829,7 +825,7 @@ while true; do
   echo "8. Ubah Pw Vps"
   echo "9. Auto Install Panel"
   echo "x. Exit"
-  echo -e "Masukkan pilihan 1/2/9/x:"
+  echo -e "Masukkan pilihan (1-9 atau x):"
   read -r MENU_CHOICE
   clear
 
